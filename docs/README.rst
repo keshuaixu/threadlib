@@ -49,7 +49,7 @@ Installation
 
 Prerequisits:
 
-- `scad-utils <https://github.com/openscad/scad-utils>`__
+- `openscad/scad-utils <https://github.com/openscad/scad-utils>`__
 - `list-comprehension <https://github.com/openscad/list-comprehension-demos>`__
 - `threadprofile.scad <https://github.com/MisterHW/IoP-satellite/blob/master/OpenSCAD%20bottle%20threads/thread_profile.scad>`__
   
@@ -97,7 +97,11 @@ argument for higbee_arc):
         :alt: M12x0.5 nut
 
 Note that for a nut you also have to specify an outer diameter. The inner
-diameter is implicitly given by the thread designator ("M12x0.5" in this case).
+diameter is implicitly given by the thread designator ("M12x0.5" in this case). You can set the number of sides for the nut! So you can make hex nuts:
+
+.. code-block:: OpenScad
+
+        nut("M30", turns=4, Douter=46, nut_sides=6); 
 
 To make a threaded hole (e.g. in a plate), an intuitive approach would be to
 create the difference of the plate and a bolt. However, this part would not work
@@ -201,6 +205,18 @@ Still reading?
 If you read this far, you're probably not here for the first time. If you
 use and like threadlib, would you consider giving it a Github Star? (The
 button is at the top of this website.)
+
+
+Contributing
+===========================
+
+Did you find a bug and would like to report it? Or maybe you've fixed it
+already or want to help fixing it? That's great! Please read
+[CONTRIBUTING](./CONTRIBUTING.md) to learn how to proceed.
+
+To help ascertain that contributing to this project is a pleasant experience,
+we have established a [code of conduct](./CODE_OF_CONDUCT.md). You can expect
+everyone to adhere to it, just make sure you do as well.
 
 
 Change Log
